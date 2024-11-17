@@ -1,7 +1,7 @@
- <div *ngIf="!isClientLoggedIn && !isCompanyLoggedIn">
+<div *ngIf="!isClientLoggedIn && !isCompanyLoggedIn">
   <nz-header class="main-header" nz-row nzType="flex" style="background-color: #299bbb;">
     <div>
-      <h2 style="color: whitesmoke; padding-left: 10px;">StudNest</h2>
+      <h2 style="color: whitesmoke; padding-left: 10px;">Service Booking System</h2>
     </div>
   <div class="nav-links">
     <a nz-button="link" routerLink="/home" routerLinkActive="active">Home</a>
@@ -9,16 +9,12 @@
     <a nz-button="link" routerLink="/login" routerLinkActive="active">Login</a>
     </div>
   </nz-header>
-   <!-- Section de bienvenue centrée -->
-   <div class="welcome-message" style="display: flex; justify-content: center; align-items: center; height: 80vh;">
-    <h1 style="font-size: 3rem; color: #299bbb;">Welcome to StudNest</h1>
-  </div>
 </div>
 
 <div *ngIf="isClientLoggedIn">
   <nz-header class="main-header" nz-row nzType="flex" style="background-color: #299bbb;">
     <div>
-      <h2 style="color: whitesmoke; padding-left: 10px;">StudNest</h2>
+      <h2 style="color: whitesmoke; padding-left: 10px;">Service Booking System</h2>
     </div>
     <div class="nav-links">
       <a nz-button="link" routerLink="/client/dashboard" routerLinkActive="active">Dashboard</a>
@@ -45,7 +41,7 @@
   <div *ngIf="isCompanyLoggedIn">
     <nz-header class="main-header" nz-row nzType="flex" style="background-color: #299bbb;">
       <div>
-        <h2 style="color: whitesmoke; padding-left: 10px;">StudNest</h2>
+        <h2 style="color: whitesmoke; padding-left: 10px;">Service Booking System</h2>
       </div>
       <div class="nav-links">
         <a nz-button="link" routerLink="/company/dashboard" routerLinkActive="active">Dashboard</a>
