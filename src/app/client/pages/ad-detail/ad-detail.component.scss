@@ -1,87 +1,142 @@
-.ad-details-container{
-	display:flex;
-	flex-direction:column;
-	align-items:center;
-	padding:20px;
-	margin-left:150px;
-	min-height:90vh;
-	.top-section{
-		display:flex;
-		justify-content:space-between;
-		width:100%;
-		.ad-detail{
-		width:70%;
-		margin-right:20px;
-		box-shadow:rgba(0,0,0,0.16) 0px 1px 4px;
-		padding:30px;
-		background-color:white;
-		img{
-			max-width:100%;
-			height:auto;
-		}
-		.ad-title{
-			font-size:24px;
-			margin-top:10px;
-		}
-		.ad-description{
-			font-size:14px;
-			margin-top:10px;
-			b{
-				font-weight:bold;
-			}
-		}
-	}
-	.book-service{
-		width:30%;
-		margin-right:150px !important;
-		box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
-		padding:20px;
-		background-color:white;
-        .nz-spin{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            .book-service-form{
-                h2{
-                    font-size: 18px;
-                }
-                nz-form{
-                    .nz-form-control{
-                        width: 100%;
-                        nz-date-picker{
-                            width: 100%;
-                        }
-                    }
-                    .book-button{
-
-                        margin-top: 10px;
-                    }
-                }
-            }
-        }
-    }
+.ad-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-left: 150px;
+    min-height: 90vh;
+    background-color: #f8f9fa; /* Couleur neutre */
   }
-  .reviews-section{
+  
+  .top-section {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-
-    .review-card{
-        margin-top: 20px;
-        width: 89%;
-        box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
-    p{
-        font-size: 14px;
-        margin-bottom: 5px;
-        strong{
-            font-weight: bold;
-            .review-rating{
-                display: block;
-            }
-        }
-      }
-     }
-   }
-}
-        
-
-    
+    gap: 20px;
+  }
+  
+  .ad-detail {
+    flex: 3;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .ad-detail:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .ad-detail img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .ad-detail h2 {
+    font-size: 28px;
+    color: #007bff;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .ad-detail h5 {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #343a40;
+  }
+  
+  .ad-detail b {
+    font-weight: 600;
+    color: #495057;
+  }
+  
+  .book-service {
+    flex: 1;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .book-service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .book-service h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #495057;
+    font-weight: 600;
+  }
+  
+  .book-service form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .book-service nz-form-item {
+    margin-bottom: 15px;
+  }
+  
+  .book-service nz-date-picker {
+    width: 100%;
+  }
+  
+  .book-service button {
+    margin-top: 15px;
+    width: 100%;
+    font-weight: bold;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+  }
+  
+  .book-service button:hover {
+    background-color: #0056b3;
+  }
+  
+  .reviews-section {
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .review-card {
+    margin-top: 20px;
+    width: 89%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .review-card p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #495057;
+  }
+  
+  .review-card strong {
+    font-weight: 600;
+    color: #343a40;
+  }
+  
+  .review-card .review-rating {
+    display: block;
+    margin-top: 5px;
+  }
+  

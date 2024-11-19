@@ -3,7 +3,8 @@
     <thead>
         <tr>
             <th style="font-weight: bolder; color: #003973;">Service</th>
-            <th style="font-weight: bolder; color: #003973;">Date</th>
+            <th style="font-weight: bolder; color: #003973;">Start Date</th>
+            <th style="font-weight: bolder; color: #003973;">End Date</th>
             <th style="font-weight: bolder; color: #003973;">Status</th>
             <th style="font-weight: bolder; color: #003973;">Action</th>
         </tr>
@@ -11,7 +12,9 @@
     <tbody>
         <tr *ngFor="let booking of basicTable.data">
            <td style="font-weight: 600;">{{booking.serviceName}}</td>  
-           <td>{{booking.bookDate | date: 'dd/MM/yyyy'}}</td>  
+           <td>{{ booking.startDate ? (booking.startDate | date: 'dd/MM/yyyy') : 'Non défini' }}</td>
+           <td>{{ booking.endDate ? (booking.endDate | date: 'dd/MM/yyyy') : 'Non défini' }}</td>
+
            <td style="font-weight: 600;">{{booking.reservationStatus}}</td>  
            <span *ngIf="booking.reviewStatus == 'FALSE' ">
                 <td>

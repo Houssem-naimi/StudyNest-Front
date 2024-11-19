@@ -26,12 +26,14 @@ export class AdDetailComponent {
               private fb: FormBuilder,
   ){}
 
-  ngOnInit(){
+  ngOnInit() {
     this.validateForm = this.fb.group({
-      bookDate: [null, Validators.required],
-    })
+      startDate: [null, Validators.required],
+      endDate: [null, Validators.required]
+    });
     this.getAdDetailById();
   }
+  
 
   getAdDetailById(){
     this.clientService.getAdDetailsByAdId(this.adId).subscribe(res=>{
@@ -41,21 +43,38 @@ export class AdDetailComponent {
       this.reviews = res.reviewDtoList;
     })
   }
-  bookService(){
+  //bookService(){
+    //const bookServiceDto = {
+      //bookDate: this.validateForm.get(['bookDate']).value,
+      //adId: this.adId,
+      //userId: UserStorageService.getUserId()
+    //}
+    //this.clientService.bookService(bookServiceDto).subscribe(res=>{
+      //this.notification
+      //.success(
+        //'SUCCESS',
+        //'Request posted succesfully',
+        //{nzDuration: 5000}
+      //);
+      //this.router.navigateByUrl('/client/bookings');
+    //})
+  //}
+  bookService() {
     const bookServiceDto = {
-      bookDate: this.validateForm.get(['bookDate']).value,
+      startDate: this.validateForm.get(['startDate']).value,
+      endDate: this.validateForm.get(['endDate']).value,
       adId: this.adId,
       userId: UserStorageService.getUserId()
     }
-    this.clientService.bookService(bookServiceDto).subscribe(res=>{
-      this.notification
-      .success(
+    this.clientService.bookService(bookServiceDto).subscribe(res => {
+      this.notification.success(
         'SUCCESS',
-        'Request posted succesfully',
-        {nzDuration: 5000}
+        'Request posted successfully',
+        { nzDuration: 5000 }
       );
       this.router.navigateByUrl('/client/bookings');
-    })
+    });
   }
+  
 
 }

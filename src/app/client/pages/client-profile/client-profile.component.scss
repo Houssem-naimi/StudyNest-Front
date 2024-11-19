@@ -1,0 +1,110 @@
+/* Style global du formulaire */
+.profile-form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .profile-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Form Group */
+  .form-group {
+    margin-bottom: 25px;
+  }
+  
+  .form-label {
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+    transition: color 0.3s ease;
+  }
+  
+  .form-label:hover {
+    color: #007bff;
+  }
+  
+  /* Inputs */
+  .form-control {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #dcdcdc;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff;
+    background-color: #ffffff;
+    outline: none;
+  }
+  
+  .form-control::placeholder {
+    color: #888;
+    font-style: italic;
+  }
+  
+  /* Error messages */
+  .error {
+    font-size: 14px;
+    color: #e74c3c;
+    margin-top: 5px;
+    font-weight: 500;
+  }
+  
+  /* Button styles */
+  .submit-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .submit-button:disabled {
+    background-color: #b0c4de;
+    cursor: not-allowed;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+  }
+  
+  /* Loading spinner */
+  .loading-spinner {
+    font-size: 18px;
+    color: #007bff;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .profile-form {
+      padding: 25px;
+      width: 90%;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .submit-button {
+      font-size: 16px;
+    }
+  }
+  

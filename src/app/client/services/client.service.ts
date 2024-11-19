@@ -67,5 +67,8 @@ export class ClientService {
       headers: this.createAuthorizationHeader()
     });
   }
+  getNotifications(userId: number) {
+  return this.http.get<any[]>(`/api/notifications/${userId}`);
+  }
 
 }

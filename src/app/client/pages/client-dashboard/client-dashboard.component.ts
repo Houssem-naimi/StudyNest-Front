@@ -17,20 +17,20 @@ export class ClientDashboardComponent {
               private fb: FormBuilder,
               private notification: NzNotificationService){}
 
-  //getAllAds(){
-    //this.clientService.getClientAds().subscribe(res=>{
-      //this.ads = res;
-    //})
-  //}
-
-  getAllAds() {
-    this.clientService.getClientAds().subscribe(res => {
+  getAllAds(){
+    this.clientService.getClientAds().subscribe(res=>{
       this.ads = res;
-      this.showNotification('Success', 'Ads have been successfully loaded!');
-    }, error => {
-      this.showNotification('Error', 'Failed to load ads.');
-    });
+    })
   }
+
+  //getAllAds() {
+    //this.clientService.getClientAds().subscribe(res => {
+      //this.ads = res;
+      //this.showNotification('Success', 'Ads have been successfully loaded!');
+    //}, error => {
+      //this.showNotification('Error', 'Failed to load ads.');
+    //});
+  //}
   
   ngOnInit(){
     this.validateForm = this.fb.group({
@@ -47,6 +47,7 @@ export class ClientDashboardComponent {
   updateImg(img) {
     return 'data:image/jpeg;base64,'+img;
   }
+  
   showNotification(title: string, content: string) {
     this.notification.info(
       title,
