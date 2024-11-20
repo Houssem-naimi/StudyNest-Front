@@ -29,7 +29,7 @@ export class MyBookingsComponent {
 //}
 getMyBookings() {
   this.clientService.getMyBookings().subscribe(res => {
-    console.log('Réponse API :', res); // Débogage
+    console.log('Réponse API :', res); // Inspectez les données reçues
     this.bookedServices = res.map((booking: any) => ({
       ...booking,
       startDate: booking.startDate ? new Date(booking.startDate) : null,
@@ -37,6 +37,7 @@ getMyBookings() {
     }));
   });
 }
+
 
 
 // Méthode utilitaire pour valider et formater les dates
