@@ -1,47 +1,38 @@
 <div class="button-container">
-    <!-- Notification Button -->
-    <button nz-button nzType="primary" (click)="showNotification('Info', 'This is a notification')" class="notification-btn">
-      <i nz-icon nzType="bell" nzTheme="outline"></i> Notification
-    </button>
-  
-    <!-- Profile Button -->
-    <button nz-button nzType="default" routerLink="/client/profile" class="profile-btn">
-      Profile
-    </button>
-  </div>
-  
-  <!-- Search Form -->
-  <form nz-form [formGroup]="validateForm" (submit)="searchAdByName()" class="search-form">
-    <input nz-input placeholder="Enter service to search:" nzSize="large" formControlName="service" />
-    <button nz-button nzSize="large" nzType="primary" [disabled]="validateForm.invalid">
-      Search
-    </button>
-  </form>
-  
-  <div class="bg">
-    <div style="margin-top: 10px;" class="child" *ngFor="let ad of ads">
-      <div nz-row>
-        <div nz-col nzSpan="8">
-          <img class="profile" [src]="updateImg(ad.returnedImg)"
-               style="height: 150px ; width: 200px; border-radius: 10px;" /> 
-        </div>
-        <div nz-col nzSpan="16">
-          <h2 style="cursor: pointer; color: rgb(0, 89, 255);">
-            {{ad.serviceName}}
-          </h2>
-          <hr>
-          <h5>
-            Price: <b>{{ad.price}}</b>
-          </h5>
-          <h5>
-            Description: <b>{{ad.description}}</b>
-          </h5>
-          <hr>
-          <div style="float: right;">
-            <button nzSize="small" nz-button nzType="primary" routerLink="/client/ad/{{ad.id}}">View</button>
-          </div>
-        </div>
-      </div>
+  <!-- Notification Button -->
+  <button nz-button nzType="primary" (click)="showNotification('Info', 'This is a notification')" class="notification-btn">
+    <i nz-icon nzType="bell" nzTheme="outline"></i> Notification
+  </button>
+
+  <!-- Profile Button -->
+  <button nz-button nzType="default" routerLink="/client/profile" class="profile-btn">
+    Profile
+  </button>
+</div>
+
+<!-- Search Form -->
+<form nz-form [formGroup]="validateForm" (submit)="searchAdByName()" class="search-form">
+  <input nz-input placeholder="Enter service to search:" nzSize="large" formControlName="service" />
+  <button nz-button nzSize="large" nzType="primary" [disabled]="validateForm.invalid">
+    Search
+  </button>
+</form>
+
+<!-- Ads Grid -->
+<div class="ads-grid">
+  <div class="ad-card" *ngFor="let ad of ads">
+    <div class="ad-image">
+      <img [src]="updateImg(ad.returnedImg)" alt="{{ad.serviceName}}" />
+    </div>
+    <div class="ad-details">
+      <h2>{{ad.serviceName}}</h2>
+      <p class="ad-description">{{ad.description}}</p>
+      <p class="ad-price">Price: <b>{{ad.price}}</b></p>
+    </div>
+    <div class="ad-actions">
+      <button nz-button nzType="primary" routerLink="/client/ad/{{ad.id}}">
+        View Details
+      </button>
     </div>
   </div>
-  
+</div>

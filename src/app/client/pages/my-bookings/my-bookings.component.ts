@@ -29,7 +29,7 @@ export class MyBookingsComponent {
 //}
 getMyBookings() {
   this.clientService.getMyBookings().subscribe(res => {
-    console.log('Réponse API :', res); // Inspectez les données reçues
+    console.log('Réponse API :', res); 
     this.bookedServices = res.map((booking: any) => ({
       ...booking,
       startDate: booking.startDate ? new Date(booking.startDate) : null,

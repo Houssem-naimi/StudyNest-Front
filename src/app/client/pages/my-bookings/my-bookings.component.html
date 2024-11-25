@@ -1,32 +1,32 @@
-<nz-table style="padding: 30px;" [nzData]="bookedServices"
-          #basicTable [nzPageSize]="20" [nzShowPagination]="'false'">
+<nz-table class="custom-table" [nzData]="bookedServices" #basicTable [nzPageSize]="20" [nzShowPagination]="false">
     <thead>
-        <tr>
-            <th style="font-weight: bolder; color: #003973;">Service</th>
-            <th style="font-weight: bolder; color: #003973;">Start Date</th>
-            <th style="font-weight: bolder; color: #003973;">End Date</th>
-            <th style="font-weight: bolder; color: #003973;">Status</th>
-            <th style="font-weight: bolder; color: #003973;">Action</th>
-        </tr>
+      <tr>
+        <th>Service</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let booking of basicTable.data">
-           <td style="font-weight: 600;">{{booking.serviceName}}</td>  
-           <td>{{ booking.startDate ? (booking.startDate | date: 'dd/MM/yyyy') : 'Non défini' }}</td>
-           <td>{{ booking.endDate ? (booking.endDate | date: 'dd/MM/yyyy') : 'Non défini' }}</td>
-
-           <td style="font-weight: 600;">{{booking.reservationStatus}}</td>  
-           <span *ngIf="booking.reviewStatus == 'FALSE' ">
-                <td>
-                    <button style="margin-left: 10px; margin-top: 15px;" 
-                            nzSize="small" nz-button nzType="primary" nzDanger
-                            routerLink="/client/review/{{booking.id}}">
-                        Review    
-                    </button>
-                </td>
-           </span> 
-
-        </tr>
+      <tr *ngFor="let booking of basicTable.data">
+        <td>{{ booking.serviceName }}</td>
+        <td>{{ booking.startDate ? (booking.startDate | date: 'dd/MM/yyyy') : 'Non défini' }}</td>
+        <td>{{ booking.endDate ? (booking.endDate | date: 'dd/MM/yyyy') : 'Non défini' }}</td>
+        <td class="status-cell">{{ booking.reservationStatus }}</td>
+        <td *ngIf="booking.reviewStatus === 'FALSE'">
+          <button
+            nzSize="small"
+            nz-button
+            nzType="primary"
+            nzDanger
+            routerLink="/client/review/{{booking.id}}"
+            class="review-btn"
+          >
+            Review
+          </button>
+        </td>
+      </tr>
     </tbody>
-
-</nz-table>
+  </nz-table>
+  

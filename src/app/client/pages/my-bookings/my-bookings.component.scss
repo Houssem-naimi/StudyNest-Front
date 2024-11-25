@@ -1,0 +1,76 @@
+/* Table Styling */
+.custom-table {
+    width: 100%;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header Styling */
+  .custom-table thead th {
+    font-weight: bold;
+    color: #003973;
+    text-align: left;
+    padding: 10px;
+    font-size: 14px;
+    border-bottom: 2px solid #e8e8e8;
+  }
+  
+  /* Row Styling */
+  .custom-table tbody tr {
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternating row colors */
+  }
+  
+  .custom-table tbody tr:hover {
+    background-color: #e6f7ff; /* Hover effect */
+  }
+  
+  /* Cell Styling */
+  .custom-table td {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Status Cell Styling */
+  .status-cell {
+    font-weight: 600;
+    color: #595959;
+  }
+  
+  /* Button Styling */
+  .review-btn {
+    padding: 5px 15px;
+    font-size: 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .review-btn:hover {
+    background-color: #ff4d4f;
+    box-shadow: 0 4px 10px rgba(255, 77, 79, 0.2);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .custom-table {
+      padding: 20px;
+    }
+  
+    .custom-table thead th,
+    .custom-table td {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .review-btn {
+      font-size: 10px;
+      padding: 5px 10px;
+    }
+  }
+  

@@ -1,4 +1,82 @@
-.heading{
-    font-weight: bolder;
-    color: #003973;
-}
+/* Table Styling */
+.dashboard-table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header Row Styling */
+  .dashboard-table thead tr {
+    background-color: #003973;
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  .dashboard-table .heading {
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+  
+  /* Table Row Styling */
+  .dashboard-table tbody .table-row {
+    background-color: #ffffff;
+    transition: background-color 0.3s;
+  }
+  
+  .dashboard-table tbody .table-row:nth-child(odd) {
+    background-color: #f2f4f7; /* Alternating row colors */
+  }
+  
+  .dashboard-table tbody .table-row:hover {
+    background-color: #e6f7ff; /* Hover effect */
+  }
+  
+  /* Table Cell Styling */
+  .dashboard-table td {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #495057;
+    vertical-align: middle;
+  }
+  
+  /* Status Column Styling */
+  .dashboard-table .status {
+    font-weight: bold;
+    text-transform: capitalize;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .dashboard-table .status.pending {
+    color: #856404;
+    background-color: #fff3cd;
+  }
+  
+  .dashboard-table .status.approved {
+    color: #155724;
+    background-color: #d4edda;
+  }
+  
+  .dashboard-table .status.rejected {
+    color: #721c24;
+    background-color: #f8d7da;
+  }
+  
+  /* Action Buttons Styling */
+  .dashboard-table .action-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+  
+  .dashboard-table .action-buttons button {
+    font-size: 13px;
+    padding: 5px 15px;
+  }
+  

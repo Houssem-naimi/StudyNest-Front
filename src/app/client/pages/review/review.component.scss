@@ -1,78 +1,96 @@
-[nz-form]{
-    max-width: 800px;
-}
-
-.phone-select{
-    width: 70px;
-}
-.register-are{
-    margin-bottom: 8px;
-}
-.child{
-    padding: 50px;
-    position: absolute;
-    width: 600px;
-    background-color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-
-    background: white;
-    box-shadow: 1px 1px 15px -7px rgba(0,0,0,0.1);
-    border-radius: 5px;
-    margin-bottom: 22px;
-}
-nz-form-control{
-    min-width: 280px;
-}
-.parent{
-    width: 100%;
-    min-height: 90vh;
-    position: relative;
-}
-.login-form-margin{
-    margin-bottom: 16px;
-}
-.login-form-forgot{
-    float: right;
-}
-.login-form-button{
-    width: 100%;
-}
-button{
-    background-color: #001529;
-    border: none;
-}
-.imgDiv{
-    width: 100%;
-    vertical-align: middle;
-}
-.profile-badge{
-    height: 180px;
+/* Review Form Container */
+.review-container {
     display: flex;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: auto;
-}
-
-@media only screen and (max-width:600px){
-    .profile-badge{
-        margin-left: 0px;
+    min-height: 90vh;
+    background-color: #f5f7f9;
+    padding: 20px;
+  }
+  
+  /* Review Form Wrapper */
+  .review-wrapper {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Header Styling */
+  .review-header h2 {
+    font-size: 24px;
+    color: #001529;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  /* Review Form Styling */
+  .review-form {
+    width: 100%;
+  }
+  
+  nz-form-item {
+    margin-bottom: 20px;
+  }
+  
+  textarea[nz-input] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #d9d9d9;
+    font-size: 14px;
+    resize: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  textarea[nz-input]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Rating Styling */
+  nz-rate {
+    font-size: 24px;
+    color: #ffcc00;
+  }
+  
+  /* Submit Button */
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #001529;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #003973;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+  }
+  
+  .submit-btn:active {
+    background-color: #001529;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .review-wrapper {
+      padding: 20px;
     }
-}
-.profile{
-    height: 180px;
-    margin-bottom: 5px;
-    object-fit: cover;
-}
-#upload_profile_image{
-    display: none;
-}
-#add_img_icon{
-    width: 70px;
-    height: 35px;
-    position: relative;
-    left: 118px;
-    top: -42px;
-}
+  
+    .review-header h2 {
+      font-size: 20px;
+    }
+  
+    .submit-btn {
+      font-size: 14px;
+    }
+  }
+  
